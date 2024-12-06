@@ -19,7 +19,7 @@ function IngredientsContainer({ toggleRecipeShown }: Props) {
   const ingredientsRequired = MIN_INGREDIENTS - ingredients.length;
 
   return (
-    <section className="mb-10">
+    <section className="mb-16">
       <IngredientForm
         formData={formData}
         setFormData={setFormData}
