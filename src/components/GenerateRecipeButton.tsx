@@ -1,8 +1,8 @@
 type Props = {
-  toggleRecipeShown: () => void;
+  getRecipe: () => void;
 };
 
-function GenerateRecipeButton({ toggleRecipeShown }: Props) {
+function GenerateRecipeButton({ getRecipe }: Props) {
   return (
     <div className="p-7 flex flex-col md:flex-row justify-between items-center rounded-lg bg-[#f0efeb]">
       <div>
@@ -14,7 +14,7 @@ function GenerateRecipeButton({ toggleRecipeShown }: Props) {
         </p>
       </div>
       <button
-        onClick={toggleRecipeShown}
+        onClick={getRecipe}
         className="w-full mt-3 md:w-auto md:mt-0 px-[17px] py-[9px] bg-[#D17557] border-none rounded-md font-inter font-medium text-sm text-[#fafaf8] cursor-pointer shadow-sm"
       >
         Get Recipe

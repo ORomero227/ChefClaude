@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { useState, Dispatch, SetStateAction } from "react";
 import IngredientsList from "./IngredientsList";
 import GenerateRecipeButton from "../GenerateRecipeButton";
 import IngredientForm from "./IngredientForm";
 
 type Props = {
-  toggleRecipeShown: () => void;
+  ingredients: string[];
+  setIngredients: Dispatch<SetStateAction<string[]>>;
+  getRecipe: () => void;
 };
 
 interface FormData {
@@ -13,8 +15,11 @@ interface FormData {
 
 const MIN_INGREDIENTS = 4;
 
-function IngredientsContainer({ toggleRecipeShown }: Props) {
-  const [ingredients, setIngredients] = useState<string[]>([]);
+function IngredientsContainer({
+  ingredients,
+  setIngredients,
+  getRecipe,
+}: Props) {
   const [formData, setFormData] = useState<FormData>({ ingredient: "" });
   const ingredientsRequired = MIN_INGREDIENTS - ingredients.length;
 
@@ -29,7 +34,7 @@ function IngredientsContainer({ toggleRecipeShown }: Props) {
       {ingredients.length > 3 ? (
         <>
           <IngredientsList ingredientsList={ingredients} />
-          <GenerateRecipeButton toggleRecipeShown={toggleRecipeShown} />
+          <GenerateRecipeButton getRecipe={getRecipe} />
         </>
       ) : (
         <p className="mt-4 text-lg font-inter font-semibold">
