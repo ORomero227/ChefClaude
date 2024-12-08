@@ -24,7 +24,7 @@ function IngredientsContainer({
   const ingredientsRequired = MIN_INGREDIENTS - ingredients.length;
 
   return (
-    <section className="mb-16">
+    <section className="mb-16 w-full">
       <IngredientForm
         formData={formData}
         setFormData={setFormData}
@@ -37,7 +37,7 @@ function IngredientsContainer({
           <GenerateRecipeButton getRecipe={getRecipe} />
         </>
       ) : (
-        <p className="mt-4 text-lg font-inter font-semibold">
+        <p className="mt-4 text-lg text-center font-inter font-semibold">
           The chef needs a minimum of {ingredientsRequired} ingredients to
           suggest a recipe.
         </p>

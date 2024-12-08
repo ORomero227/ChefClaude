@@ -1,7 +1,7 @@
 import { useState } from "react";
 import IngredientsContainer from "./Ingredients/IngredientsContainer";
 import ClaudeRecipe from "./ClaudeRecipe";
-import { getRecipeFromChefClaude } from "../api/recipeAPI";
+import { getRecipeFromChefClaude } from "../api/recipeApi";
 
 function Main() {
   const [ingredients, setIngredients] = useState<string[]>([]);
@@ -13,8 +13,8 @@ function Main() {
   }
 
   return (
-    <main className="flex justify-center h-screen p-4 md:p-0">
-      <div className="flex flex-col pt-16">
+    <main className="flex justify-center max-w-xl mx-auto min-h-screen p-4 md:p-0">
+      <div className="flex flex-col pt-16 w-full">
         <IngredientsContainer
           ingredients={ingredients}
           setIngredients={setIngredients}
