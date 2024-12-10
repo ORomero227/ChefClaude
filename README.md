@@ -22,26 +22,26 @@
 
    ```bash
    git clone https://github.com/ORomero227/ChefClaude.git
-   cd claude-ai-recipe-generator
+   cd ChefClaude
    ```
 
 2. Install Dependencies
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. Configure the .env file with your Anthropic API Key
 
-```bash
-VITE_ANTHROPIC_API_KEY=your_api_key
-```
+   ```bash
+   VITE_ANTHROPIC_API_KEY=your_api_key
+   ```
 
 4. Start the development server
 
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 ## 💻 Usage
 
