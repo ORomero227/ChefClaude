@@ -15,7 +15,7 @@ function GenerateRecipeButton({ getRecipe }: Props) {
       </div>
       <button
         onClick={getRecipe}
-        className="w-full mt-3 md:w-auto md:mt-0 px-[17px] py-[9px] bg-[#D17557] border-none rounded-md font-inter font-medium text-sm text-[#fafaf8] cursor-pointer shadow-sm"
+        className="w-full mt-3 md:w-auto md:mt-0 px-[17px] py-[9px] bg-[#D17557] border-none rounded-md font-inter font-medium text-sm text-[#fafaf8] cursor-pointer shadow-xs"
       >
         Get Recipe
       </button>

@@ -38,12 +38,12 @@ function IngredientForm({ setFormData, setIngredients, formData }: Props) {
         name="ingredient"
         value={formData.ingredient}
         onChange={handleChange}
-        className="w-full mb-2 md:mb-0 bg-white placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-1.5 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow"
+        className="w-full mb-2 md:mb-0 bg-white placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-1.5 transition duration-300 ease focus:outline-hidden focus:border-slate-400 hover:border-slate-300 shadow-xs focus:shadow-sm"
         placeholder="e.g. Oregano"
       />
 
       <button
-        className="w-full flex-shrink-0 md:w-auto rounded-md bg-[#141413] px-2.5 py-1 border border-transparent text-center text-sm text-white font-medium hover:bg-slate-900 disabled:pointer-events-none"
+        className="w-full shrink-0 md:w-auto rounded-md bg-[#141413] px-2.5 py-1 border border-transparent text-center text-sm text-white font-medium hover:bg-slate-900 disabled:pointer-events-none"
         type="submit"
       >
         + Add Ingredient

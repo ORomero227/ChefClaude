@@ -1,14 +1,12 @@
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
+// import Main from "./components/Main";
+import DefaultLayout from "./layouts/DefaultLayout";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <DefaultLayout>
+      <Home />
+    </DefaultLayout>
   );
 }
 
