@@ -1,8 +1,8 @@
 function Footer() {
   return (
-    <footer className="m-4 mt-16 max-w-xl mx-auto container mb-10 text-center">
+    <footer className="flex flex-col items-center justify-center w-full py-4">
       <span className="text-base font-inter">
-        🧑🏾‍💻 Developed by Oscar Romero Barbosa
+        👨‍💻 Built by Oscar Romero Barbosa
       </span>
     </footer>
   );

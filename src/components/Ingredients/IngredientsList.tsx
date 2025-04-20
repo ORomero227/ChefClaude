@@ -1,20 +1,38 @@
-type Props = {
-  ingredientsList: string[];
+import { Dispatch, SetStateAction } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { X } from "lucide-react";
+
+type IngredientsListProps = {
+  ingredients: string[];
+  setIngredients: Dispatch<SetStateAction<string[]>>;
 };
 
-function IngredientsList({ ingredientsList }: Props) {
+export default function IngredientsList(props: IngredientsListProps) {
+  const { setIngredients, ingredients } = props;
+
   return (
-    <div className="mt-7 w-full">
-      <h2 className="mb-4 text-3xl font-inter font-semibold">
-        Ingredients on hand:
-      </h2>
-      <ul className="mb-7 p-2 list-disc list-inside text-xl text-slate-600 leading-relaxed">
-        {ingredientsList.map((ingredient, index) => (
-          <li key={index}>{ingredient}</li>
-        ))}
-      </ul>
+    <div className="flex flex-wrap gap-2 mt-4">
+      {ingredients.map((ingredient, index) => (
+        <Badge
+          key={ingredient}
+          variant={"secondary"}
+          className="text-sm flex items-center gap-1 pr-1"
+        >
+          {ingredient}
+          <Button
+            variant={"ghost"}
+            size="icon"
+            aria-label={`Remove ${ingredient}`}
+            className="w-4 h-4"
+            onClick={() =>
+              setIngredients((prev) => prev.filter((_, i) => i !== index))
+            }
+          >
+            <X className="w-3 h-3" />
+          </Button>
+        </Badge>
+      ))}
     </div>
   );
 }
-
-export default IngredientsList;

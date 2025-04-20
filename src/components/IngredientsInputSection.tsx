@@ -1,14 +1,44 @@
-export default function IngredientsInputSection() {
+import IngredientForm from "@/components/ingredients/IngredientForm";
+import IngredientsList from "@/components/ingredients/IngredientsList";
+import GenerateRecipeCallout from "@/components/GenerateRecipeCallout";
+import { Dispatch, SetStateAction } from "react";
+
+type IngredientsSectionProps = {
+  ingredients: string[];
+  setIngredients: Dispatch<SetStateAction<string[]>>;
+};
+
+export default function IngredientsInputSection(
+  props: IngredientsSectionProps
+) {
+  const { setIngredients, ingredients } = props;
   return (
     <div className="bg-white p-6 rounded-lg shadow-xs">
       <h2 className="text-xl font-semibold text-black">Ingredients on hand</h2>
-      <span className="text-sm text-gray-600">
-        Enter the ingredients you have on hand, and Chef Claude will suggest a
-        recipe for you. For best results, add at least 3 ingredients.
-      </span>
-      <div className="space-y-4">
-        <div className="flex gap-2"></div>
+      <p className="text-sm text-gray-600 font-normal mt-2 text-pretty">
+        Enter one or more ingredients and Chef Claude will recommend a recipe!
+      </p>
+      <div className="mt-4">
+        <IngredientForm setIngredients={setIngredients} />
       </div>
+      <div className="mt-4">
+        <h3 className="text-sm font-medium mb-2">Ingredients You Added:</h3>
+        <IngredientsList
+          setIngredients={setIngredients}
+          ingredients={ingredients}
+        />
+      </div>
+      {ingredients.length > 0 ? (
+        <GenerateRecipeCallout
+          onClick={() => {
+            console.log("generate recipe");
+          }}
+        />
+      ) : (
+        <p className="text-sm text-gray-500">
+          Your list is empty. Add ingredients to get started!
+        </p>
+      )}
     </div>
   );
 }
