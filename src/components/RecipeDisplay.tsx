@@ -1,7 +1,7 @@
 import ReactMarkDown from "react-markdown";
 
 type Props = {
-  recipe: string;
+  recipe?: string;
 };
 
 const markdownComponents = {
@@ -19,15 +19,14 @@ const markdownComponents = {
   h4: (props: any) => <h4 className="text-xl font-bold my-4" {...props} />,
 };
 
-function ClaudeRecipe({ recipe }: Props) {
+function RecipeDisplay({ recipe }: Props) {
   return (
-    <section className="w-full">
-      <h3 className="text-3xl font-inter font-semibold">Suggested Recipe:</h3>
+    <div>
       <article className="font-inter text-[#475467] leading-7 text-lg font-normal">
         <ReactMarkDown components={markdownComponents}>{recipe}</ReactMarkDown>
       </article>
-    </section>
+    </div>
   );
 }
 
-export default ClaudeRecipe;
+export default RecipeDisplay;
