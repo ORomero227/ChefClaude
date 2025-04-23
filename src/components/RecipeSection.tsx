@@ -1,10 +1,11 @@
 import { ChefHat } from "lucide-react";
-import RecipeDisplay from "@/components/RecipeDisplay";
+import RecipeDisplay from "@/components/recipe/RecipeDisplay";
 import { Progress } from "@/components/ui/progress";
+import { Recipe } from "@/types/recipe";
 
 type RecipeSectionProps = {
   loading?: boolean;
-  recipe: string;
+  recipe: Recipe | null;
   progress: number;
 };
 
@@ -12,7 +13,6 @@ export default function RecipeSection(props: RecipeSectionProps) {
   const { loading, recipe, progress } = props;
   return (
     <div className="bg-white p-6 rounded-lg shadow-sm">
-      <h2 className="text-xl font-semibold text-black">Suggested Recipe</h2>
       {loading ? (
         // Show loading state with progress bar
         <div className="mt-6">

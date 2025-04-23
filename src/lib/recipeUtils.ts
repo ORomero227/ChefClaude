@@ -1,13 +1,14 @@
 import { getRecipeFromChefClaude } from "@/api/recipeApi";
+import { Recipe } from "@/types/recipe";
 
 export async function generateRecipe(
   ingredients: string[],
   setLoading: (val: boolean) => void,
   setProgress: (val: number) => void,
-  setRecipe: (val: string) => void
+  setRecipe: (val: Recipe) => void
 ) {
   setLoading(true);
-  setRecipe("");
+  setRecipe({} as Recipe);
 
   // Progress simulation
   let current = 0;
@@ -17,8 +18,8 @@ export async function generateRecipe(
   }, 200);
 
   try {
-    const recipeMarkdown = await getRecipeFromChefClaude(ingredients);
-    setRecipe(recipeMarkdown);
+    const recipe = await getRecipeFromChefClaude(ingredients);
+    setRecipe(recipe);
   } finally {
     clearInterval(interval);
     setProgress(100);

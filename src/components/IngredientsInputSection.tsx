@@ -3,9 +3,10 @@ import IngredientsList from "@/components/ingredients/IngredientsList";
 import GenerateRecipeCallout from "@/components/GenerateRecipeCallout";
 import { Dispatch, SetStateAction, useState } from "react";
 import { generateRecipe } from "@/lib/recipeUtils";
+import { Recipe } from "@/types/recipe";
 
 type IngredientsSectionProps = {
-  setRecipe: Dispatch<SetStateAction<string>>;
+  setRecipe: Dispatch<SetStateAction<Recipe | null>>;
   setLoading: Dispatch<SetStateAction<boolean>>;
   setProgress: Dispatch<SetStateAction<number>>;
 };
