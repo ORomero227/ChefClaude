@@ -22,7 +22,7 @@ export default function IngredientsInputSection(
   }
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-xs lg:max-h-fit">
+    <div className="bg-white p-6 rounded-lg shadow-sm lg:max-h-fit">
       <h2 className="text-xl font-semibold text-black">Ingredients on hand</h2>
       <p className="text-sm text-gray-600 font-normal mt-2 text-pretty">
         Enter one or more ingredients and Chef Claude will recommend a recipe!

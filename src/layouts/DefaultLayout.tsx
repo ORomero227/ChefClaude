@@ -9,10 +9,10 @@ export default function DefaultLayout(props: DefaultLayoutProps) {
   const { children } = props;
 
   return (
-    <div className="min-h-screen bg-[#FAFAF8] flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Header />
       <main className="flex-1">
-        <div className="container mx-auto px-4 py-8">{children}</div>
+        <div>{children}</div>
       </main>
       <Footer />
     </div>
