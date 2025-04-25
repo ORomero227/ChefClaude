@@ -1,6 +1,7 @@
 import IngredientForm from "@/components/ingredient/IngredientForm";
 import IngredientsList from "@/components/ingredient/IngredientList";
 import GenerateRecipeCallout from "@/components/GenerateRecipeCallout";
+import { useNavigate } from "react-router-dom";
 import { Dispatch, SetStateAction, useState } from "react";
 import { generateRecipe } from "@/lib/recipeUtils";
 import { Recipe } from "@/types/recipe";
@@ -19,9 +20,16 @@ export default function IngredientsInputSection(
 ) {
   const { setLoading, setRecipe, setProgress } = props;
   const [ingredients, setIngredients] = useState<string[]>([]);
+  const navigate = useNavigate();
 
   async function handleGenerateRecipe() {
-    await generateRecipe(ingredients, setLoading, setProgress, setRecipe);
+    await generateRecipe(
+      ingredients,
+      setLoading,
+      setProgress,
+      setRecipe,
+      navigate
+    );
   }
 
   return (

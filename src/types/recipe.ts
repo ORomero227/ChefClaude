@@ -1,12 +1,13 @@
-export type Recipe = {
-  id?: number;
-  title: string;
-  description: string;
-  prepTime: string;
-  cookTime: string;
-  ingredients: string[];
-  instructions: string[];
-  servings: number;
-  category: string;
-  savedDate?: string;
-};
+import { z } from "zod";
+
+export const RecipeSchema = z.object({
+  id: z.number().optional(),
+  title: z.string(),
+  description: z.string(),
+  cookTime: z.string(),
+  ingredients: z.array(z.string()),
+  instructions: z.array(z.string()),
+  servings: z.number(),
+});
+
+export type Recipe = z.infer<typeof RecipeSchema>;
