@@ -1,4 +1,4 @@
-import { getRecipeFromChefClaude } from "@/api/recipeApi";
+import { getRecipeFromChefClaude } from "@/services/getRecipeFromChefClaude";
 import { Recipe } from "@/types/recipe";
 
 export async function generateRecipe(
