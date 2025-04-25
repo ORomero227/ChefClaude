@@ -57,8 +57,9 @@ function IngredientForm(props: IngredientFormProps) {
             name="ingredient"
             value={formData.ingredient}
             onChange={handleChange}
+            className="focus-visible:ring-[#22c55e]/50"
           />
-          <Button type="submit" className="w-full md:w-auto">
+          <Button type="submit" className="w-full md:w-auto bg-[#22c55e]">
             Add <Plus />
           </Button>
         </div>

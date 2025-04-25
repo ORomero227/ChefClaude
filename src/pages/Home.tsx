@@ -10,6 +10,9 @@ export default function Home() {
 
   return (
     <div className="container mx-auto px-4 py-8">
+      <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gray-600 tracking-tight">
+        Chef<span className="text-[#22c55e]">Claude</span>
+      </h1>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         <IngredientsInputSection
           setLoading={setLoading}

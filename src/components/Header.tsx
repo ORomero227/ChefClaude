@@ -1,25 +1,23 @@
-import { Link } from "react-router-dom";
-import { Button } from "./ui/button";
+import Navbar from "@/components/navbar/Navbar";
+import { Home, LayoutDashboard, ChefHat } from "lucide-react";
+
+const links = [
+  { to: "/", name: "Home", Icon: Home },
+  { to: "/dashboard", name: "Dashboard", Icon: LayoutDashboard },
+];
 
 function Header() {
   return (
-    <header className="py-3 flex items-center bg-[#D17557] text-white justify-between">
-      <Link to={"/"}>
-        <div className="flex items-center">
-          <img src="/src/assets/chef-icon.svg" className="size-8" />
-          <h1 className="font-inter font-semibold text-xl">ChefClaude</h1>
+    <header className="sticky top-0 z-50 w-full px-6 backdrop-blur-md bg-white/80 border-b border-gray-100">
+      <div className="container flex h-16 items-center justify-between">
+        <div className="flex items-center gap-1 font-bold text-xl text-gray-800">
+          <ChefHat />
+          <span className="hidden sm:inline-block">
+            Chef<span className="text-[#22c55e]">Claude</span>
+          </span>
         </div>
-      </Link>
-      <nav className="flex items-center gap-2 px-2">
-        <Button variant={"ghost"} className="bg-white text-black">
-          <Link to={"/register"}>Register</Link>
-        </Button>
-        <Button variant={"ghost"} className="bg-white text-black">
-          <Link to={"/login"} className="bg-white text-black">
-            Login
-          </Link>
-        </Button>
-      </nav>
+        <Navbar links={links} />
+      </div>
     </header>
   );
 }

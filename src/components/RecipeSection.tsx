@@ -12,11 +12,11 @@ type RecipeSectionProps = {
 export default function RecipeSection(props: RecipeSectionProps) {
   const { loading, recipe, progress } = props;
   return (
-    <div className="bg-white p-6 rounded-lg shadow-sm">
+    <div className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100">
       {loading ? (
         // Show loading state with progress bar
         <div className="mt-6">
-          <p className="text-sm text-gray-500">Generating recipe</p>
+          <p className=" text-gray-500 text-center">Generating recipe</p>
           <Progress value={progress} className="w-full" />
         </div>
       ) : recipe ? (
@@ -26,9 +26,9 @@ export default function RecipeSection(props: RecipeSectionProps) {
         // Empty state when no recipe is generated
         <div className="text-center text-gray-500 mt-6 flex flex-col gap-2 items-center">
           <ChefHat className="size-10" />
-          <p className="text-sm">
-            Enter one or more ingredients above and click the "Generate Recipe"
-            button to see a suggestion!
+          <p className="max-w-sm">
+            Enter one or more ingredients and click the "Generate Recipe" button
+            to see a suggestion!
           </p>
         </div>
       )}

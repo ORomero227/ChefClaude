@@ -12,7 +12,7 @@ export default function IngredientsList(props: IngredientsListProps) {
   const { setIngredients, ingredients } = props;
 
   return (
-    <div className="flex flex-wrap gap-2 mt-4">
+    <div className="flex flex-wrap gap-2">
       {ingredients.map((ingredient, index) => (
         <Badge
           key={ingredient}

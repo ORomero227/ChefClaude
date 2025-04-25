@@ -12,7 +12,7 @@ export default function RecipeButtonAction({
     <Button
       variant="outline"
       size="icon"
-      className="h-8 w-8 border-[#e0d8c7] hover:text-white hover:bg-[#D17557]"
+      className="size-10 rounded-full border-gray-200 text-gray-500 hover:text-primary hover:border-[#22c55e] transition-colors"
     >
       {children}
     </Button>

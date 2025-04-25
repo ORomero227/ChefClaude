@@ -5,14 +5,10 @@ const SYSTEM_PROMPT = `You are an assistant that receives a list of ingredients 
 
   title: string;
   description: string;
-  prepTime: string;
   cookTime: string;
-  ingredients: string[];
+  ingredients: string[]; // Each ingredient should include quantity and unit (e.g., "2 cups of flour", "1 tsp salt")
   instructions: string[];
   servings: number;
-  category: string;
-
-Use the category field as a concrete tag that identifies the type of recipe (e.g. "salsa", "dessert", "salad", "beverage", "starter", "snack", "soup", "side dish").
 
 Do not use vague or general labels like "main course", "meal", "lunch", or "general recipe". The value should clearly describe what kind of dish it is, not when or how it is served.
 Do not include any other text or explanation. 

@@ -1,10 +1,7 @@
 import RecipeButtonAction from "@/components/recipe/RecipeButtonAction";
-import { Bookmark, Share2 } from "lucide-react";
+import { Clipboard } from "lucide-react";
 
-const actions = [
-  { icon: <Share2 className="h-4 w-4" /> },
-  { icon: <Bookmark className="h-4 w-4" /> },
-];
+const actions = [{ icon: <Clipboard className="size-5" /> }];
 
 export default function RecipeActions() {
   return (

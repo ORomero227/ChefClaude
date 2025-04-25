@@ -16,7 +16,7 @@ export default function GenerateRecipeCallout({ onClick }: Props) {
             Generate a recipe from your list of ingredients
           </p>
         </div>
-        <Button className="bg-[#D17557] w-full md:w-auto" onClick={onClick}>
+        <Button className="bg-[#22c55e] w-full md:w-auto" onClick={onClick}>
           Generate Recipe
         </Button>
       </div>
