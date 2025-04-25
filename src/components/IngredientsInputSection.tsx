@@ -1,5 +1,5 @@
-import IngredientForm from "@/components/ingredients/IngredientForm";
-import IngredientsList from "@/components/ingredients/IngredientsList";
+import IngredientForm from "@/components/ingredient/IngredientForm";
+import IngredientsList from "@/components/ingredient/IngredientList";
 import GenerateRecipeCallout from "@/components/GenerateRecipeCallout";
 import { Dispatch, SetStateAction, useState } from "react";
 import { generateRecipe } from "@/lib/recipeUtils";
