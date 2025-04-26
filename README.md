@@ -23,3 +23,6 @@
 ## 🚀 Try It Live
 
 🔗 https://chefclaude-cuisine.vercel.app/
+
+## Screenshot
+![chef_claude](https://github.com/user-attachments/assets/2a7f9133-1222-4771-958b-10c4271239fd)
